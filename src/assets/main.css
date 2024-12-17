@@ -1,35 +1,47 @@
-@import './base.css';
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("JosefinSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("Caveat-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+body {
+    font-family: "Caveat", cursive, sans-serif;
+    background:
+            url("@/assets/bg/left.svg") no-repeat 6rem 0 / 17%,
+            url("@/assets/bg/top-right.svg") no-repeat top right,
+            url("@/assets/bg/bottom-right.svg") no-repeat bottom right,
+            url("@/assets/bg/snow.png")
+;
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+    place-items: center;
+    min-height: 100dvh;
+}
+
+.frame-paper {
+    background-color: #fcf8f4;
+    border: 1rem solid;
+    border-image-source: repeating-linear-gradient(
+        45deg,
+        #b70000,
+        #b70000 10px,
+        #006f30 10px,
+        #006f30 20px,
+        #b70000 20px
+    );
+  border-image-slice: 16;
+  border-image-repeat: stretch;
 }
